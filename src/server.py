@@ -39,6 +39,7 @@ db.app = server
 
 for blueprint in vars(routes).values():
     if isinstance(blueprint, Blueprint):
+        print(blueprint)
         server.register_blueprint(blueprint, url_prefix=config.APPLICATION_ROOT)
 
 if __name__ == "__main__":
